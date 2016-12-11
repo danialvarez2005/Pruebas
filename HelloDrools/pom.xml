@@ -16,20 +16,22 @@
 	</properties>
 
 	<repositories>
-		<repository>
-			<id>jboss-public-repository-group</id>
-			<name>JBoss Public Repository Group</name>
-			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
-			<releases>
-				<enabled>true</enabled>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>daily</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
+    <repository>
+      <id>guvnor-m2-repo</id>
+      <name>Guvnor M2 Repo</name>
+      <url>http://localhost:8080/business-central/maven2/</url>
+    </repository>
+  </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.kie</groupId>
+        <artifactId>kie-maven-plugin</artifactId>
+        <version>6.5.0.Final-redhat-2</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
 
 	<dependencies>
 		<dependency>

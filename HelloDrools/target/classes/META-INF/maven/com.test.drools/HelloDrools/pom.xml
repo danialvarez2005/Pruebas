@@ -17,17 +17,16 @@
 
 	<repositories>
 		<repository>
-			<id>jboss-maven-repository</id>
-			<name>JBoss Maven Repository</name>
-			<url>http://maven.repository.redhat.com/techpreview/all/</url>
-			<layout>default</layout>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Repository Group</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
 			<releases>
 				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
+				<updatePolicy>never</updatePolicy>
 			</releases>
 			<snapshots>
 				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
+				<updatePolicy>daily</updatePolicy>
 			</snapshots>
 		</repository>
 	</repositories>
@@ -45,19 +44,9 @@
 		</dependency>
 		<dependency>
 			<groupId>org.drools</groupId>
-			<artifactId>drools-decisiontables</artifactId>
+			<artifactId>drools-compiler</artifactId>
 			<version>${runtime.version}</version>
 		</dependency>
-
-		<dependency>
-			<groupId>org.jbpm</groupId>
-			<artifactId>jbpm-test</artifactId>
-			<version>${runtime.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.kie</groupId>
-			<artifactId>kie-ci</artifactId>
-			<version>${runtime.version}</version>
-		</dependency>
+		 
 	</dependencies>
 </project>
